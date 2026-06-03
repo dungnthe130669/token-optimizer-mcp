@@ -1,6 +1,6 @@
 {
   "name": "agent-token-optimizer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "MCP server: 11 tools to reduce Claude Code / AI agent token consumption by 50-70%",
   "type": "module",
   "main": "./dist/index.js",

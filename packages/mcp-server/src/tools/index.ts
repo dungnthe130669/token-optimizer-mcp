@@ -10,6 +10,22 @@ import { registerSuggestMaxTokens }       from './suggest-max-tokens.js';
 import { registerWarmCache }              from './warm-cache.js';
 import { registerPackContext }            from './pack-context.js';
 import { registerSearchRelevantSkills }   from './search-relevant-skills.js';
+import { readSessionUsage }               from './read-session-usage.js';
+
+function registerReadSessionUsage(server: McpServer) {
+  server.tool(
+    'read_session_usage',
+    'Read REAL token usage from ~/.claude/projects/*.jsonl — actual input/output/cache tokens per session from Claude Code API responses. More accurate than estimate_tokens.',
+    {
+      session_id: z.string().optional().describe('Specific session UUID to read (optional)'),
+      last_n:     z.number().default(3).describe('Number of recent sessions to read (default: 3)'),
+    },
+    async (args) => {
+      const result = await readSessionUsage(args);
+      return { content: [{ type: 'text' as const, text: JSON.stringify(result, null, 2) }] };
+    }
+  );
+}
 
 function registerGetSavingsReport(server: McpServer) {
   server.tool(
@@ -63,4 +79,5 @@ export function registerAllTools(server: McpServer) {
   registerWarmCache(server);
   registerPackContext(server);
   registerGetSavingsReport(server);
+  registerReadSessionUsage(server);
 }
