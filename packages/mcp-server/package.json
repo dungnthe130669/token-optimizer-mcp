@@ -1,17 +1,18 @@
 {
   "name": "agent-token-optimizer",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "MCP server: 11 tools to reduce Claude Code / AI agent token consumption by 50-70%",
   "type": "module",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
   "files": [
     "dist",
+    "hooks",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npx esbuild hooks/pre-tool-compress.ts --bundle --platform=node --format=esm --outfile=hooks/pre-tool-compress.mjs",
     "dev": "tsx src/index.ts",
     "postinstall": "node dist/postinstall.js",
     "prepublishOnly": "npm run build"
