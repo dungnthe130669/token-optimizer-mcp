@@ -5,7 +5,7 @@ import { registerAllTools } from './tools/index.js';
 
 const server = new McpServer({
   name: 'token-optimizer',
-  version: '0.1.0',
+  version: '0.1.3',
 });
 
 registerAllTools(server);

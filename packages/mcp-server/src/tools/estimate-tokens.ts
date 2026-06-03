@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { estimateTokens, tokensToUsd } from '@token-optimizer/core';
+import { estimateTokens, tokensToUsd } from '../core/index.js';
 
 export function registerEstimateTokens(server: McpServer) {
   server.tool(

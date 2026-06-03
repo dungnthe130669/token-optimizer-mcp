@@ -1,7 +1,7 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 import { createHash } from 'crypto';
-import { estimateTokens, initAnalyticsDB, logSaving } from '@token-optimizer/core';
+import { estimateTokens, initAnalyticsDB, logSaving } from '../core/index.js';
 
 const MessageSchema = z.object({ role: z.string(), content: z.unknown() });
 

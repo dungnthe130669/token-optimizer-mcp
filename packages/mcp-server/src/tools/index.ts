@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { initAnalyticsDB, getSummary, getTotalSaved } from '@token-optimizer/core';
+import { initAnalyticsDB, getSummary, getTotalSaved } from '../core/index.js';
 import { registerEstimateTokens }        from './estimate-tokens.js';
 import { registerCompressToolOutput }     from './compress-tool-output.js';
 import { registerCompressHistory }        from './compress-history.js';

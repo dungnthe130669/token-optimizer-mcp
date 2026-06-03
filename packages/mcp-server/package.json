@@ -1,7 +1,7 @@
 {
   "name": "agent-token-optimizer",
-  "version": "0.1.2",
-  "description": "MCP server: 9 tools to reduce Claude Code / AI agent token consumption by 50-70%",
+  "version": "0.1.4",
+  "description": "MCP server: 11 tools to reduce Claude Code / AI agent token consumption by 50-70%",
   "type": "module",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
@@ -17,13 +17,13 @@
   },
   "keywords": [
     "mcp", "claude", "claude-code", "token", "optimization",
-    "ai", "llm", "context", "compression", "cost", "anthropic"
+    "ai", "llm", "context", "compression", "cost", "anthropic", "vertex"
   ],
   "author": "Dung Nguyen <dngtiennguyen17@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dungnthe130669/token-optimizer-mcp.git"
+    "url": "git+https://github.com/dungnthe130669/token-optimizer-mcp.git"
   },
   "homepage": "https://github.com/dungnthe130669/token-optimizer-mcp#readme",
   "bugs": {
@@ -31,8 +31,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "@token-optimizer/core": "*",
-    "@token-optimizer/rag-store": "*",
+    "@huggingface/transformers": "^3.0.0",
     "better-sqlite3": "^11.10.0",
     "zod": "^3.23.0"
   },
@@ -44,4 +43,3 @@
   },
   "engines": { "node": ">=18" }
 }
-

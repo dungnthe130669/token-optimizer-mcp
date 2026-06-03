@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { estimateTokens, initAnalyticsDB, logSaving } from '@token-optimizer/core';
+import { estimateTokens, initAnalyticsDB, logSaving } from '../core/index.js';
 import { callLLM } from '../llm-caller.js';
 
 const THRESHOLD_TOKENS = 2000;

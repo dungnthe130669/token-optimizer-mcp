@@ -1,6 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { search } from '@token-optimizer/rag-store';
+import { search } from '../rag/index.js';
 
 export function registerSearchRelevantSkills(server: McpServer) {
   server.tool(
