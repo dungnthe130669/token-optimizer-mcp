@@ -1,0 +1,21 @@
+{
+  "name": "@token-optimizer/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "tok": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@token-optimizer/core": "*",
+    "@token-optimizer/rag-store": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
