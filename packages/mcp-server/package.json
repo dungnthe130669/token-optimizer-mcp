@@ -1,6 +1,6 @@
 {
   "name": "agent-token-optimizer",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "MCP server: 11 tools to reduce Claude Code / AI agent token consumption by 50-70%",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,11 +13,22 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
+    "postinstall": "node dist/postinstall.js",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "mcp", "claude", "claude-code", "token", "optimization",
-    "ai", "llm", "context", "compression", "cost", "anthropic", "vertex"
+    "mcp",
+    "claude",
+    "claude-code",
+    "token",
+    "optimization",
+    "ai",
+    "llm",
+    "context",
+    "compression",
+    "cost",
+    "anthropic",
+    "vertex"
   ],
   "author": "Dung Nguyen <dngtiennguyen17@gmail.com>",
   "license": "MIT",
@@ -41,5 +52,7 @@
     "tsx": "^4.7.0",
     "typescript": "^5.4.0"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }
